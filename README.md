@@ -31,12 +31,12 @@ El proyecto utiliza un entorno profesional para asegurar el orden y la escalabil
 * **Vistas:** Interfaz de usuario (index.php)
 * **Controladores:** Lógica de búsqueda (buscar.php)
 
-## 📊 Diagrama de flujo
+## 📊 Diagrama de flujo del sistema
 ```mermaid
 graph TD
-A[Usuario] --> B[Vista - index.php]
-B --> C[Controlador - buscar.php]
-C --> D[Modelo - Producto.php]
-D --> E[Base de Datos]
+    A[Usuario] --> B[Vista - index.php]
+    B --> C[Controlador - buscar.php]
+    C --> D[Modelo - Producto.php]
+    D --> E[Base de Datos]
 
 Segunda Evaluación - Profesor: Roberto Carmona Claro
