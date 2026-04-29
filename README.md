@@ -26,5 +26,17 @@ El proyecto utiliza un entorno profesional para asegurar el orden y la escalabil
 3. Activar Apache y MySQL en el panel de **XAMPP**.
 4. Acceder vía navegador a: `http://localhost/techhub`
 
----
-*Evaluación final del semestre - Profesor: Roberto Carmona Claro*
+## 🏗️ Arquitectura (MVC)
+* **Modelos:** Acceso a datos (Producto.php)
+* **Vistas:** Interfaz de usuario (index.php)
+* **Controladores:** Lógica de búsqueda (buscar.php)
+
+## 📊 Diagrama de flujo
+```mermaid
+graph TD
+A[Usuario] --> B[Vista - index.php]
+B --> C[Controlador - buscar.php]
+C --> D[Modelo - Producto.php]
+D --> E[Base de Datos]
+
+Segunda Evaluación - Profesor: Roberto Carmona Claro
