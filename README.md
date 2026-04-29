@@ -1,35 +1,41 @@
-# 💻 TechHub Store - Proyecto AIEP
+ 💻 TechHub Store - Proyecto AIEP
 
-Sistema de catálogo tecnológico desarrollado para la asignatura de Programación de Aplicaciones Web.
-
-## 👥 Integrantes
+Sistema de catálogo tecnológico desarrollado para la asignatura de **Programación de Aplicaciones Web**.
+👥 Integrantes
 * Daniel Rodríguez Salazar
 * Jonathan Alegría Saavedra
 
- 🚀 Tecnologías y Arquitectura
-El proyecto utiliza un entorno profesional para asegurar el orden y la escalabilidad del código:
-* **Arquitectura MVC:** Separación clara de responsabilidades (Modelo, Vista, Controlador).
-* **PHP Orientado a Objetos (POO):** Uso de clases y métodos.
-* **PDO:** Conexión segura a la base de datos MySQL.
-* **AJAX:** Buscador dinámico que filtra productos en tiempo real sin recargar la página.
-* **Bootstrap 5:** Interfaz de usuario moderna y responsiva.
+🏗️ Arquitectura del Proyecto
+El sistema se basa en el patrón **MVC (Modelo-Vista-Controlador)**, lo que permite una separación clara entre la interfaz y la lógica de negocio:
+* **Modelos:** Encargados de la lógica de datos y la conexión con la base de datos (`models/Producto.php`).
+* **Vistas:** Archivos que generan la interfaz de usuario para el cliente (`index.php`).
+* **Controladores/Lógica:** Procesan las peticiones y gestionan la comunicación entre modelo y vista (`buscar.php`).
+* **Configuración:** Clase global para la gestión de la conexión PDO (`config/Database.php`).
 
- 🏗️ Estructura del Proyecto (MVC)
-* **Modelos:** Acceso a datos (`models/Producto.php`)
-* **Vistas:** Interfaz de usuario (`index.php`)
-* **Controladores/Lógica:** Procesamiento de búsqueda (`buscar.php`)
-* **Configuración:** Conexión PDO (`config/Database.php`)
+🛠️ Stack Tecnológico
+* **Lenguaje:** PHP 8.2 (Programación Orientada a Objetos).
+* **Base de Datos:** MySQL / MariaDB.
+* **Frontend:** HTML5, CSS3, JavaScript (Fetch API / AJAX).
+* **Framework CSS:** Bootstrap 5.3.
 
- 📋 Requisitos e Instalación
-1. Clonar este repositorio en `C:\xampp\htdocs\techhub`.
-2. Importar el archivo `script_db.sql` en **phpMyAdmin**.
-3. Activar Apache y MySQL en el panel de **XAMPP**.
-4. Acceder vía navegador a: `http://localhost/techhub`
+📋 Requisitos de Software e Instalación
+Para el correcto funcionamiento del sistema, se requiere el siguiente entorno:
 
- 📊 Diagrama de flujo del sistema
+ Requisitos de Software
+1. **Servidor Local:** XAMPP v8.1 o superior.
+2. **Motor de BD:** MySQL 5.7+ o MariaDB 10.4+.
+3. **Módulos PHP:** Extensión `pdo_mysql` habilitada (viene activa por defecto en XAMPP).
+
+ Pasos para la Instalación
+1. **Base de Datos:** Importar el archivo `script_db.sql` desde **phpMyAdmin** para crear la estructura y los datos iniciales.
+2. **Despliegue:** Clonar o copiar este repositorio en la ruta: `C:\xampp\htdocs\techhub`.
+3. **Servicios:** Iniciar los módulos **Apache** y **MySQL** desde el Panel de Control de XAMPP.
+4. **Ejecución:** Acceder mediante el navegador a la dirección: `http://localhost/techhub`
+
+📊 Diagrama de flujo del sistema
 ```mermaid
 graph TD
     A[Usuario] --> B[Vista - index.php]
     B --> C[Controlador - buscar.php]
     C --> D[Modelo - Producto.php]
-    D --> E[Base de Datos]
+    D --> E[Base de Datos MySQL]
